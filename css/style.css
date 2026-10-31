@@ -420,3 +420,23 @@ body {
 html {
     scroll-behavior: smooth;
 }
+/* CELULARES PEQUEÑOS */
+@media (max-width: 380px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    #galeriaSamalui .carousel-item {
+        height: 220px;
+    }
+
+    .category-card img {
+        height: 190px;
+    }
+
+}
