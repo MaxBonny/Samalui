@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -9,6 +9,10 @@
 
     <!-- Bootstrap 5.0.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- ICONOS BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <!-- CSS propio -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -46,6 +50,11 @@
 
                     <li class="nav-item">
                         <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+
+                    <!-- NUEVO: UBICACIÓN -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ubicacion">Ubicación</a>
                     </li>
 
                 </ul>
@@ -328,16 +337,83 @@
                 Escríbenos y te ayudaremos a encontrarlo.
             </p>
 
+            <!-- DIRECCIÓN -->
+            <p>
+                <strong>Dirección:</strong><br>
+                Urbanización Tirol 3, Torre 4, Medellín, Antioquia.
+            </p>
+
+            <!-- TELÉFONO -->
+           <div class="mb-3">
+               <p class="mb-1">
+               <strong>Teléfono</strong>
+            </p>
+
+    <a href="tel:+573000195693"
+       class="text-decoration-none text-white fw-bold">
+
+        <span>📞</span> 300 019 5693
+
+    </a>
+</div>
+            
+
+            <!-- BOTÓN WHATSAPP -->
             <a href="https://wa.me/573000195693"
                target="_blank"
-               rel="noopener"
-               class="btn btn-light btn-lg contact-btn">
+               rel="noopener noreferrer"
+               class="whatsapp-btn">
 
+                <i class="bi bi-whatsapp"></i>
                 Contactar por WhatsApp
 
             </a>
 
         </div>
+    </section>
+
+    <!-- SECCIÓN UBICACIÓN -->
+    <section id="ubicacion" class="container section-space">
+
+        <div class="section-heading text-center">
+
+            <p class="subtitulo">VISÍTANOS</p>
+
+            <h2>
+                Encuéntranos en <em>SAMALUI</em>
+            </h2>
+
+        </div>
+
+        <div class="rounded overflow-hidden shadow mx-auto"
+             style="max-width: 650px; height: 300px;">
+
+            <iframe
+                src="https://maps.google.com/maps?q=6.2845242,-75.6142008&z=17&output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+
+        </div>
+
+        <div class="text-center mt-4">
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=6.2845242,-75.6142008"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-primary">
+
+                Cómo llegar
+
+            </a>
+
+        </div>
+
     </section>
 
     <!-- PIE DE PÁGINA -->

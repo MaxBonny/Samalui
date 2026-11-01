@@ -440,3 +440,34 @@ html {
     }
 
 }
+/* BOTÓN WHATSAPP */
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #25D366;
+    color: white !important;
+    border: 2px solid #25D366;
+    border-radius: 30px;
+    padding: 13px 28px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* LOGO */
+.whatsapp-btn img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
+
+/* AL PASAR EL CURSOR */
+.whatsapp-btn:hover {
+    background: #35104F;
+    border-color: #35104F;
+    color: white !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(53, 16, 79, 0.35);
+}
