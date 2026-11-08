@@ -1,4 +1,3 @@
-
 /* =================================
    CONFIGURACIÓN GENERAL
 ================================= */
@@ -89,7 +88,7 @@ h1, h2, h3 {
 ================================= */
 
 .hero {
-    min-height: 720px;
+    min-height: 520px;
     padding: 150px 0 100px;
     display: flex;
     align-items: center;
@@ -139,7 +138,7 @@ h2 em {
 
 .hero-sticker {
     position: absolute;
-    right: 10%;
+    right: 20%;
     bottom: 12%;
     width: 130px;
     height: 130px;
@@ -277,7 +276,7 @@ h2 em {
 .footer {
     padding: 35px 0;
     background: var(--crema);
-    color: var(--gris);
+    color: var(--vino);
     font-size: 14px;
 }
 
@@ -291,10 +290,38 @@ h2 em {
     margin-bottom: 10px;
 }
 
+/* BOTÓN VOLVER ARRIBA */
+
 .footer a:last-child {
-    color: var(--vino);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 10px;
+    padding: 12px 25px;
+
+    background: white;
+    color: #71364f !important;
+
+    border: 2px solid white;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 700;
     text-decoration: none;
+
+    transition: all 0.3s ease;
 }
+
+.footer a:last-child:hover {
+    background: #4c2638;
+    color: white !important;
+    border-color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 /* =================================
    RESPONSIVE - CELULARES
@@ -325,6 +352,7 @@ h2 em {
     }
 
 }
+
 body {
     background-color: #f7e8ed !important;
 }
@@ -336,7 +364,9 @@ body {
 .navbar-brand {
     color: white !important;
 }
+
 /* LOGO SAMALUI */
+
 .logo-samalui {
     width: 150px;
     height: 65px;
@@ -361,15 +391,18 @@ body {
 }
 
 #galeriaSamalui .carousel-item {
-    height: 500px;
+    height: auto;
     transition: transform 0.8s ease-in-out,
                 opacity 0.8s ease-in-out;
 }
 
 #galeriaSamalui .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    display: block;
+    width: 700px;
+    height: 500px;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
 }
 
 #galeriaSamalui .carousel-caption {
@@ -402,9 +435,6 @@ body {
 }
 
 @media (max-width: 768px) {
-    #galeriaSamalui .carousel-item {
-        height: 300px;
-    }
 
     #galeriaSamalui .carousel-caption h5 {
         font-size: 18px;
@@ -413,6 +443,7 @@ body {
     #galeriaSamalui .carousel-caption p {
         font-size: 13px;
     }
+
 }
 
 /* DESPLAZAMIENTO SUAVE DE LA PÁGINA */
@@ -420,7 +451,9 @@ body {
 html {
     scroll-behavior: smooth;
 }
+
 /* CELULARES PEQUEÑOS */
+
 @media (max-width: 380px) {
 
     .hero h1 {
@@ -431,16 +464,14 @@ html {
         min-height: 550px;
     }
 
-    #galeriaSamalui .carousel-item {
-        height: 220px;
-    }
-
     .category-card img {
         height: 190px;
     }
 
 }
+
 /* BOTÓN WHATSAPP */
+
 .whatsapp-btn {
     display: inline-flex;
     align-items: center;
@@ -457,6 +488,7 @@ html {
 }
 
 /* LOGO */
+
 .whatsapp-btn img {
     width: 24px;
     height: 24px;
@@ -464,10 +496,82 @@ html {
 }
 
 /* AL PASAR EL CURSOR */
+
 .whatsapp-btn:hover {
     background: #35104F;
     border-color: #35104F;
     color: white !important;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(53, 16, 79, 0.35);
+}
+
+/* =================================
+   FACHADA DEL NEGOCIO
+================================= */
+
+.fachada-section {
+    background-color: white;
+}
+
+.fachada-image-container {
+    max-width: 650px;
+    margin: 35px auto 0;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(76, 38, 56, 0.15);
+}
+
+.fachada-image {
+    display: block;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* TABLETS */
+
+@media (max-width: 991px) {
+    .fachada-image {
+        height: 280px;
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 767px) {
+    .fachada-image {
+        height: 220px;
+    }
+}
+
+/* CELULARES PEQUEÑOS */
+
+@media (max-width: 380px) {
+    .fachada-image {
+        height: 190px;
+    }
+}
+
+/* Enlaces del menú en color blanco */
+.navbar .nav-link {
+    color: white !important;
+}
+
+/* Color al pasar el cursor */
+.navbar .nav-link:hover {
+    color: #f7e8ed !important;
+}
+
+.hero-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-imagen img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    object-fit: contain;
 }
