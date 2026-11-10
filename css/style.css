@@ -1,0 +1,366 @@
+/* ==========================================
+   PROMPT MAESTRO — VARIEDADES SAMALUI
+   ARCHIVO: css/style.css
+   ========================================== */
+
+/* ------------------------------------------
+   1. VARIABLES & IDENTIDAD VISUAL
+   ------------------------------------------ */
+:root {
+  --vino: #71364f;
+  --vino-oscuro: #4c2638;
+  --rosado: #f7e8ed;
+  --rosa: #d99aaf;
+  --crema: #fffaf8;
+  --texto: #332b30;
+  --gris: #756b70;
+  
+  --font-principal: 'DM Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-titulares: 'Playfair Display', Georgia, serif;
+  
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --shadow-soft: 0 4px 20px rgba(113, 54, 79, 0.08);
+  --shadow-hover: 0 10px 25px rgba(113, 54, 79, 0.15);
+}
+
+/* ------------------------------------------
+   2. RESET & ESTILOS BASE
+   ------------------------------------------ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--font-principal);
+  background-color: var(--crema);
+  color: var(--texto);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-playfair,
+.titulo-destacado {
+  font-family: var(--font-titulares);
+  color: var(--vino);
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+a {
+  color: var(--vino);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--vino-oscuro);
+}
+
+/* Indicador de Enfoque (Accesibilidad) */
+:focus-visible {
+  outline: 3px solid var(--rosa);
+  outline-offset: 3px;
+}
+
+/* ------------------------------------------
+   3. NAVEGACIÓN (HEADER & NAVBAR)
+   ------------------------------------------ */
+.navbar {
+  background-color: var(--crema);
+  box-shadow: 0 2px 12px rgba(113, 54, 79, 0.06);
+  padding: 0.8rem 1rem;
+  transition: all var(--transition-normal);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-family: var(--font-titulares);
+  font-weight: 700;
+  color: var(--vino) !important;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.navbar-brand img {
+  height: 38px;
+  width: auto;
+  object-fit: contain;
+}
+
+.navbar-nav {
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nav-link {
+  font-family: var(--font-principal);
+  color: var(--texto) !important;
+  font-weight: 500;
+  padding: 0.5rem 0.75rem !important;
+  font-size: 0.95rem;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  color: var(--vino) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--rosa);
+  padding: 0.4rem 0.6rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(217, 154, 175, 0.4);
+}
+
+/* ------------------------------------------
+   4. BOTONES E INSIGNIAS (BADGES)
+   ------------------------------------------ */
+.btn-vino {
+  background-color: var(--vino);
+  color: white !important;
+  border: 2px solid var(--vino);
+  border-radius: 50px;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-principal);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.btn-vino:hover,
+.btn-vino:focus {
+  background-color: var(--vino-oscuro);
+  border-color: var(--vino-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 38, 56, 0.25);
+}
+
+.btn-outline-vino {
+  background-color: transparent;
+  color: var(--vino) !important;
+  border: 2px solid var(--vino);
+  border-radius: 50px;
+  padding: 0.75rem 1.75rem;
+  font-family: var(--font-principal);
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.btn-outline-vino:hover,
+.btn-outline-vino:focus {
+  background-color: var(--vino);
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(113, 54, 79, 0.2);
+}
+
+.badge-brand {
+  background-color: var(--rosado);
+  color: var(--vino);
+  border: 1px solid var(--rosa);
+  border-radius: 50px;
+  padding: 0.4rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* ------------------------------------------
+   5. SECCIÓN INICIO / HERO
+   ------------------------------------------ */
+.hero-section {
+  background: linear-gradient(135deg, var(--rosado) 0%, var(--crema) 100%);
+  padding: 140px 0 100px 0;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ------------------------------------------
+   6. SECCIÓN CATEGORÍAS
+   ------------------------------------------ */
+.categorias-section {
+  background-color: #ffffff;
+  padding: 90px 0;
+}
+
+.category-card {
+  background-color: #ffffff;
+  border: 1px solid var(--rosado);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  height: 100%;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal), border-color var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--rosa);
+}
+
+/* ------------------------------------------
+   7. SECCIÓN GALERÍA DE PRODUCTOS
+   ------------------------------------------ */
+.galeria-section {
+  background-color: var(--rosado);
+  padding: 90px 0;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(217, 154, 175, 0.3);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.product-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-color: #fff;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.06);
+}
+
+/* ------------------------------------------
+   8. SECCIÓN NOSOTROS, CONTACTO Y UBICACIÓN
+   ------------------------------------------ */
+.nosotros-section {
+  background-color: #ffffff;
+  padding: 90px 0;
+}
+
+.contacto-section {
+  background-color: var(--crema);
+  padding: 90px 0;
+}
+
+.ubicacion-section {
+  background-color: #ffffff;
+  padding: 90px 0;
+}
+
+.map-container {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 2px solid var(--rosado);
+  box-shadow: var(--shadow-soft);
+}
+
+/* ------------------------------------------
+   9. FOOTER Y BOTÓN FLOTANTE
+   ------------------------------------------ */
+footer {
+  background-color: var(--vino-oscuro);
+  color: var(--crema);
+  padding: 3rem 0 2rem 0;
+}
+
+footer a {
+  color: var(--rosado);
+}
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366;
+  color: #ffffff !important;
+  border-radius: 50px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  z-index: 1000;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #20ba5a;
+}
+
+/* ------------------------------------------
+   10. MEDIA QUERIES (RESPONSIVE)
+   ------------------------------------------ */
+@media (max-width: 575.98px) {
+  .hero-section {
+    padding: 100px 0 50px 0;
+    text-align: center;
+  }
+}
